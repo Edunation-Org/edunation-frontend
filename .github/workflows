@@ -17,18 +17,16 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-          cache-dependency-path: frontend/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install Dependencies 📦
         run: |
-          cd frontend
           npm ci
 
       - name: Build 🔧
         run: |
           cd frontend
           echo "REACT_APP_API_BASE_URL=${{ secrets.REACT_APP_API_BASE_URL }}" > .env.production
-          echo "REACT_APP_STRIPE_PUBLISHABLE_KEY=${{ secrets.REACT_APP_STRIPE_PUBLISHABLE_KEY }}" >> .env.production
           npm run build
         env:
           CI: false
@@ -36,5 +34,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: frontend/build
+          folder: build
           branch: gh-pages
