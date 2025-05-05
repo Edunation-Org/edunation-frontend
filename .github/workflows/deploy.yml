@@ -25,7 +25,6 @@ jobs:
 
       - name: Build 🔧
         run: |
-          cd frontend
           echo "REACT_APP_API_BASE_URL=${{ secrets.REACT_APP_API_BASE_URL }}" > .env.production
           npm run build
         env:
