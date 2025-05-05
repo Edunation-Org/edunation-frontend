@@ -5,7 +5,8 @@ on:
     branches:
       - main
 
-jobs:  build-and-deploy:
+jobs:
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -29,7 +30,9 @@ jobs:  build-and-deploy:
           echo "REACT_APP_API_BASE_URL=${{ secrets.REACT_APP_API_BASE_URL }}" > .env.production
           npm run build
         env:
-          CI: false      - name: Deploy 🚀
+          CI: false
+          
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
