@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/edunation-frontend/static/css/main.f855e6bc.css",
-    "main.js": "/edunation-frontend/static/js/main.0a590d7c.js",
+    "main.js": "/edunation-frontend/static/js/main.bde55b40.js",
     "static/js/453.6ea38922.chunk.js": "/edunation-frontend/static/js/453.6ea38922.chunk.js",
     "static/media/logo.svg": "/edunation-frontend/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/edunation-frontend/index.html",
     "main.f855e6bc.css.map": "/edunation-frontend/static/css/main.f855e6bc.css.map",
-    "main.0a590d7c.js.map": "/edunation-frontend/static/js/main.0a590d7c.js.map",
+    "main.bde55b40.js.map": "/edunation-frontend/static/js/main.bde55b40.js.map",
     "453.6ea38922.chunk.js.map": "/edunation-frontend/static/js/453.6ea38922.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.0a590d7c.js"
+    "static/js/main.bde55b40.js"
   ]
 }
