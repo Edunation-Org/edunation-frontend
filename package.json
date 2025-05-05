@@ -1,7 +1,7 @@
 {
   "name": "edunation-frontend",
   "version": "0.1.0",
-  "homepage": "https://Edunation-Org.github.io/edunation-frontend",
+  "homepage": "https://www.edunationalacademy.com/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
