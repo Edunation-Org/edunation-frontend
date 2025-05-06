@@ -1,5 +1,5 @@
 import s from "../styles/Hero.module.css";
-import HeroImg from "../images/hero-img.svg";
+import HeroImg from "../images/hero.svg";
 import Arrow from "../images/arrow.svg";
 import MathIcon from "../images/math-icon.png";
 
