@@ -1,0 +1,52 @@
+.cardContainer {
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 400px;
+    min-width: 350px;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: all 0.3s;
+    background: linear-gradient(130deg, var(--accent-color), #f5e7fc);
+}
+
+.cardContainer:hover {
+    background: var(--light-color);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardHeader .subjectTitle h2 {
+    color: var(--dark-color);
+    font-size: 1.3rem;
+}
+
+.cardContainer .cardBody p {
+    color: rgb(99, 99, 99);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.cardContainer:hover .cardBody p {
+    color: var(--dark-color);
+}
+
+.cardContainer .cardButtonContainer button {
+    background: none;
+    border: none;
+    color: var(--sec-color);
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.cardContainer:hover .cardButtonContainer button {
+    opacity: 1;
+}

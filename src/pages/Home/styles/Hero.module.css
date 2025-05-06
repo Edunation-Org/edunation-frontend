@@ -1,0 +1,122 @@
+.heroContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-top: 10rem;
+}
+
+.imgContainer {
+    width: 17%;
+    min-width: 400px;
+}
+
+.imgContainer img {
+    width: 100%;
+}
+
+.heroContentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.subContentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subContent {
+    display: flex;
+    align-items: center;
+    margin-right: 15rem;
+}
+
+.imgRow {
+    display: flex;
+}
+
+.imgFiller {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    border: 1px solid var(--light-color);
+}
+
+.imgFiller:nth-child(2) {
+    transform: translateX(-20%);
+}
+
+.imgFiller:nth-child(3) {
+    transform: translateX(-40%);
+}
+
+.imgFiller:nth-child(4) {
+    transform: translateX(-60%);
+}
+
+.subTextContainer h3 {
+    font-size: var(--sec-fs);
+    color: var(--sec-color);
+    font-weight: 600;
+}
+
+.contactContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.contactContainer img {
+    position: absolute;
+    top: -7rem;
+    left: -5rem;
+    width: 100px;
+    height: auto;
+}
+
+.contactContainer button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--sec-color);
+    color: var(--light-color);
+    font-size: var(--main-fs);
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contactContainer button:hover {
+    background-color: var(--main-color);
+}
+
+.subjectsGraphicsContainer {
+    width: 80%;
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;
+}
+
+.graphicsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.graphicsContainer img {
+    width: 8%;
+}
+
+.graphicsContainer h2 {
+    color: var(--sec-color);
+}

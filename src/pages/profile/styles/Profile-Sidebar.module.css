@@ -1,0 +1,101 @@
+.profileSidebarContainer {
+    width: 35%;
+    background-color: var(--light-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 0 3rem;
+}
+
+.logoutButton {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    margin: 2rem 0;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.logoutButton .icon {
+    width: 1.2rem;
+    color: var(--dark-grey-color);
+    transition: color 0.3s;
+}
+
+.logoutButton:hover .icon {
+    color: var(--dark-color);
+}
+
+.logoutButton h3 {
+    font-size: clamp(0.8rem, 0.8vw + 0.5rem, 1.2rem);
+    color: var(--dark-grey-color);
+    transition: color 0.3s;
+}
+
+.logoutButton:hover h3 {
+    color: var(--dark-color);
+}
+
+.profileDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profileDetails .imgContainer {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--grey-color);
+    border-radius: 50%;
+}
+
+.profileDetails .content {
+    text-align: center;
+}
+
+.profileDetails .content h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.profileDetails .content p {
+    font-size: 0.8rem;
+    color: var(--grey-color);
+}
+
+.prevClassesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.prevClassesContainer h3 {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.prevClassesContainer p {
+    color: var(--dark-grey-color);
+    font-size: clamp(0.8rem, 0.8vw + 0.5rem, 1rem);
+}
+
+.classCardContainer {
+    border-top: 1px solid var(--grey-color);
+    border-bottom: 1px solid var(--grey-color);
+}
+
+.classCardContainer .cardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}

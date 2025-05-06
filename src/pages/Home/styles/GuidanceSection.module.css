@@ -1,0 +1,77 @@
+.guidanceSectionGrid {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.guidanceSectionGrid .gridWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    row-gap: 2rem;
+}
+
+.gridWrapper .titleContainer h1 {
+    font-size: 4rem;
+}
+
+.gridWrapper .descriptionContainer {
+    align-content: end;
+    padding-bottom: 1rem;
+}
+
+.cardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 4rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.cardContainer:nth-child(3) {
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+
+.cardContainer:nth-child(3) h2,
+.cardContainer:nth-child(3) p {
+    color: var(--light-color);
+}
+
+.cardContainer:hover {
+    background-color: var(--main-color);
+}
+
+.cardContainer .iconContainer {
+    width: 7%;
+}
+
+.cardContainer .iconContainer .cardIcon {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.cardContainer:hover .iconContainer .cardIcon {
+    color: var(--light-color);
+}
+
+.cardContainer h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cardContainer:hover h2 {
+    color: var(--light-color);
+}
+
+.cardContainer p {
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.cardContainer:hover p {
+    color: var(--light-color);
+}

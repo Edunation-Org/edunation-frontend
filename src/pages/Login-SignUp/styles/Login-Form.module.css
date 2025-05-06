@@ -1,0 +1,102 @@
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.forgotPasswordContainer.active {
+    display: flex;
+    animation: opacity 0.5s ease forwards;
+}
+
+.forgotPasswordContainer {
+    position: absolute;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    display: none;
+}
+
+.formContainer {
+    width: 50%;
+    max-width: 700px;
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.formContainer .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+
+.formContainer .header h2 {
+    font-weight: 600;
+}
+
+.formContainer .header .closeBtn {
+    cursor: pointer;
+    width: 2rem;
+    background: none;
+    border: none;
+}
+
+.formContainer .header .closeBtn .icon {
+    color: var(--dark-color);
+    transition: color 0.3s;
+}
+
+.formContainer .header .closeBtn:hover .icon {
+    color: var(--main-color);
+}
+
+.formContainer p {
+    margin-bottom: 5rem;
+    font-size: 1rem;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.forgotPasswordForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgotPasswordInput {
+    width: max-content;
+    border: none;
+    background: none;
+    border-bottom: 1.5px solid var(--dark-color);
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.forgotPasswordInput:focus {
+    outline: none;
+}
+
+.forgotPasswordBtn {
+    width: max-content;
+    padding: 0.7rem 1rem;
+    margin-left: auto;
+    background: var(--main-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.forgotPasswordBtn:hover {
+    background: var(--sec-color);
+}

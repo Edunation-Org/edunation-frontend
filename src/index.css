@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --light-color: #FAFAFA;
+  --dark-color: #151515;
+  --grey-color: #CECECE;
+  --dark-grey-color: #808080;
+  --main-color: #87CEEB;
+  --sec-color: #1A1A80;
+  --accent-color: #E0F6FF;
+  --large-fs: 6rem;
+  --big-fs: 4rem;
+  --sec-fs: 1.8rem;
+  --main-fs: 1.4rem;
+  --small-fs: 1.2rem;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--sec-color);
+  background-color: var(--light-color);
+}
+
+.titleFont {
+  font-family: 'Manrope', sans-serif;
+}
+
+.bodyFont {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

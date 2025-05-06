@@ -1,0 +1,78 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    /* dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modalContent {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modalInput {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modalInput .datePicker {
+    padding: 0.5rem;
+    border: 1px solid var(--grey-color);
+    border-radius: 8px;
+    font-size: var(--main-fs);
+    color: var(--dark-color);
+    background: var(--light-color);
+}
+
+.modalInput .datePicker:disabled {
+    background: #eeeeee;
+    cursor: not-allowed;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.modalActions button {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: var(--main-fs);
+    color: var(--light-color);
+    background: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modalActions button:hover {
+    background: var(--sec-color);
+}
+
+.modalActions .cancelBtn {
+    background: var(--grey-color);
+}

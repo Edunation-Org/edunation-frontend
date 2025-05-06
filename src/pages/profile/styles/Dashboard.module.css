@@ -1,0 +1,265 @@
+.dashboardContainer {
+    width: 100%;
+    margin: 0 4rem;
+}
+
+.dashboardHeader {
+    position: relative;
+    margin: 4rem 0;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboardHeader .content {
+    width: 45%;
+    margin: 2.5rem 0 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.dashboardHeader .content h2 {
+    font-weight: 600;
+}
+
+.dashboardHeader .imageContainer {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0%;
+    right: 2rem;
+}
+
+.dashboardHeader .imageContainer img {
+    height: 100%;
+}
+
+.dashboardContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboardContent .classesContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.dashboardContent .classesContainer h3 {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.dashboardContent .classesContainer .classCardContainer {
+    padding: 2rem;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.classCardContainer .upperHalf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.classCardContainer .cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.classCardContainer .cardContent .subjectTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.classCardContainer .cardContent .tutorName {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--grey-color);
+}
+
+.classCardContainer .dateTimeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.classCardContainer .dateTimeContainer .date,
+.classCardContainer .dateTimeContainer .time {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--grey-color);
+}
+
+.timeSpentContainer {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.timeSpentContainer h3 {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.timeSpentContainer .contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2rem;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.timeSpentContainer .contentContainer h3 {
+    color: var(--sec-color);
+    font-size: 1rem;
+}
+
+.chartContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chartContainer .timeSpentChart {
+    overflow: visible;
+    width: 60% !important;
+    height: auto !important;
+}
+
+.chartContainer p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--dark-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.chartLabels {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.chartLabels .label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chartLabels .label .colorBox {
+    width: 1rem;
+    height: 1rem;
+}
+
+.chartLabels p {
+    color: var(--dark-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.zoomLink {
+    transition: all 0.3s ease-in-out;
+    color: var(--main-color);
+}
+
+.zoomLink:hover {
+    color: var(--sec-color);
+}
+
+.zoomEditContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.zoomInput {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--sec-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.zoomUrlText {
+    flex: 1;
+    color: var(--sec-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.zoomInput:focus {
+    outline: none;
+    border-bottom: 1px solid var(--grey-color);
+    padding-bottom: 0.5rem;
+}
+
+.zoomButton {
+    width: max-content;
+    color: var(--light-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.zoomButton:disabled {
+    background: var(--grey-color) !important;
+    cursor: not-allowed;
+}
+
+#editZoomButton {
+    background: var(--sec-color);
+}
+
+#cancelZoomButton {
+    background: rgb(223, 35, 35);
+}
+
+#saveZoomButton {
+    background: var(--sec-color);
+}
+
+.zoomButtonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}

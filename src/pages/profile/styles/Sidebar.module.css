@@ -1,0 +1,62 @@
+.sidebarContainer {
+    position: sticky;
+    width: max-content;
+    height: 100vh;
+    background-color: var(--accent-color);
+    padding: 1.5rem 0 0 4rem;
+}
+
+.logoContainer {
+    margin-bottom: 3rem;
+}
+
+.sidebarLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebarLink {
+    position: relative;
+    padding-right: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.sidebarLink .sidebarIcon {
+    width: 1.5rem;
+    color: var(--grey-color);
+    transition: color 0.3s;
+}
+
+.sidebarLink p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--grey-color);
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.sidebarLink:hover .sidebarIcon,
+.sidebarLink:hover p {
+    color: var(--sec-color);
+}
+
+a.active .sidebarLink .sidebarIcon,
+a.active .sidebarLink p {
+    color: var(--dark-color);
+}
+
+a.active .sidebarLink::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: var(--sec-color);
+    border-radius: 20px;
+}

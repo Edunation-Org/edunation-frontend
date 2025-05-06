@@ -1,0 +1,182 @@
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    margin-bottom: 5rem;
+    transition: all 0.3s;
+}
+
+nav.shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-color);
+}
+
+nav.colored {
+    background-color: var(--accent-color) !important;
+}
+
+.navLinks {
+    display: flex;
+    gap: 5rem;
+}
+
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.subjectsLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    margin-right: 3rem;
+    position: relative;
+}
+
+.subjectsLink p {
+    color: var(--sec-color);
+    font-size: var(--small-fs);
+}
+
+.subjectsLink::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--sec-color);
+    transition: width 0.3s;
+}
+
+.subjectsLink:hover::before {
+    width: 100%;
+}
+
+.subjectsLink .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropDown:hover .dropDownMenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropDownMenu {
+    position: absolute;
+    width: 100%;
+    top: 3.9rem;
+    left: 0;
+    background-color: var(--light-color);
+    padding: 3rem 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+
+}
+
+.dropDownMenu .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dropDownMenu .content .header p {
+    font-size: var(--small-fs);
+    font-weight: 600;
+    color: var(--sec-color);
+}
+
+.dropDownMenu .content .item {
+    display: flex;
+    align-items: center;
+}
+
+.dropDownMenu .content .item a {
+    color: var(--dark-color);
+    transition: all 0.3s;
+    font-weight: 400;
+}
+
+.dropDownMenu .content .item a:hover {
+    color: var(--grey-color);
+}
+
+.contactButton {
+    background: var(--sec-color);
+    border: 1px solid var(--sec-color);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: var(--light-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.contactButton:hover {
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.walletButton {
+    background: none;
+    border: 1px solid var(--sec-color);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: var(--sec-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.walletButton:hover {
+    background: var(--sec-color);
+    color: var(--light-color);
+}
+
+.loginButton {
+    background: none;
+    border: 1px solid var(--sec-color);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: var(--sec-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.loginButton:hover {
+    background: var(--sec-color);
+    color: var(--light-color);
+}
+
+.profileButton {
+    cursor: pointer;
+    color: var(--light-color);
+    transition: all 0.3s;
+}
+
+.profileButton:hover {
+    background: var(--sec-color);
+    border: 1px solid var(--sec-color);
+}
