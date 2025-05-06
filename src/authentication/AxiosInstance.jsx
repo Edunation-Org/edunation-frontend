@@ -3,6 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import config from "../configs/config";
 
 const baseURL = process.env.REACT_APP_API_BASE_URL || "http://localhost:8000";
+console.log("🚀 ~ baseURL:", baseURL);
 
 const axiosInstance = axios.create({
   baseURL: `${baseURL}/`,
