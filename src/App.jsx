@@ -2,8 +2,8 @@ import "./App.css";
 
 import { AuthProvider } from "./authentication/AuthContext.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home.jsx";
-import Login from "./pages/login-signup/Login-SignUp.jsx";
+import Home from "./pages/Home/Home.jsx";
+import Login from "./pages/Login-SignUp/Login-SignUp.jsx";
 import Subjects from "./pages/subjects/Subjects.jsx";
 import Profile from "./pages/profile/Profile.jsx";
 import Dashboard from "./pages/profile/components/Dashboard.jsx";
