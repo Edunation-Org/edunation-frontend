@@ -110,7 +110,7 @@ function Login() {
       />
       <div ref={containerRef} className="container">
         <h2 className="hero-btn">
-          <a href="/home">Edunation</a>
+          <a href="/">Edunation</a>
         </h2>
         <div className="forms-container">
           <div className="signin-signup">

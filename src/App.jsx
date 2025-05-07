@@ -16,10 +16,10 @@ import Subject from "./pages/subject/Subject.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <AuthProvider>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route
             path="/complete-profile"
@@ -51,7 +51,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="my-profile" element={<MyProfile />} />
           </Route>
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

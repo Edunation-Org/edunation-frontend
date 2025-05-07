@@ -33,7 +33,7 @@ function LoginForm({ handleSnackbar }) {
         if (result.isProfileComplete) {
           setTimeout(() => {
             setLoading(false);
-            Navigate("/home");
+            Navigate("/");
           }, 2000);
         } else {
           setTimeout(() => {
