@@ -79,7 +79,9 @@ export default function Navbar(props) {
           </div>
         </div>
 
-        <button className={s.contactButton}>Contact Us</button>
+        <a href="mailto:info@edunationalacademy.com">
+          <button className={s.contactButton}>Contact Us</button>
+        </a>
 
         {user ? (
           <Link to="/wallet">

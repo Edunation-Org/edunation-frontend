@@ -3,7 +3,7 @@ import AuthContext from "../../../authentication/AuthContext";
 import ClipLoader from "react-spinners/ClipLoader";
 import { useNavigate } from "react-router-dom";
 
-function LoginForm({ handleSnackbar }) {
+function LoginForm() {
   const { login } = useContext(AuthContext);
 
   let Navigate = useNavigate();
@@ -12,6 +12,8 @@ function LoginForm({ handleSnackbar }) {
     username: "",
     password: "",
   });
+
+  const [error, setError] = useState(null);
 
   const [loading, setLoading] = useState(false);
 
@@ -28,29 +30,20 @@ function LoginForm({ handleSnackbar }) {
     try {
       const result = await login(formData);
       if (result.loggedIn) {
-        handleSnackbar(result.message || "Login successful");
-
         if (result.isProfileComplete) {
-          setTimeout(() => {
-            setLoading(false);
-            Navigate("/");
-          }, 2000);
+          setLoading(false);
+          Navigate("/");
         } else {
-          setTimeout(() => {
-            setLoading(false);
-            Navigate("/complete-profile");
-          }, 2000);
+          setLoading(false);
+          Navigate("/complete-profile");
         }
       }
     } catch (error) {
       setLoading(false);
       if (error.response?.data?.errorDetails.code === "INVALID_CREDENTIALS") {
-        handleSnackbar(
-          error.response?.data?.errorDetails.message ||
-            "Login failed. Please try again."
-        );
+        setError("Invalid username or password.");
       } else {
-        handleSnackbar("Login failed. Please try again.");
+        setError("Login failed. Please try again.");
       }
     }
   };
@@ -59,6 +52,8 @@ function LoginForm({ handleSnackbar }) {
     <>
       <form onSubmit={handleLogin} className="sign-in-form">
         <h2 className="title">Login</h2>
+        {error && <p className="error-message">{error}</p>}
+
         <div className="input-field">
           <i className="fas fa-user"></i>
           <input

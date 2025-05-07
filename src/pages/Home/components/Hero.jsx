@@ -31,7 +31,9 @@ export default function Hero() {
             </div>
             <div className={s.contactContainer}>
               <img src={Arrow} alt="" />
-              <button>Contact Us</button>
+              <a href="mailto:info@edunationalacademy.com">
+                <button>Contact Us</button>
+              </a>
             </div>
           </div>
         </div>
