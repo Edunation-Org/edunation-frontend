@@ -176,3 +176,44 @@
     font-weight: 400;
 
 }
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .stepsSection {
+        width: 100%;
+    }
+
+    .stepsGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stepsGrid .imgContainer {
+        max-height: 300px;
+        overflow: hidden;
+    }
+
+    .stepsGrid .imgContainer img {
+        border-radius: 0;
+    }
+
+    .stepsGrid .journeyContainer {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .stepsGrid .subContentContainer {
+        width: 90%;
+        margin-inline: auto;
+        display: flex;
+    }
+
+    .stepsGrid .subContentContainer .courseButtonContainer a button {
+        text-align: center;
+        padding: 1rem;
+    }
+}

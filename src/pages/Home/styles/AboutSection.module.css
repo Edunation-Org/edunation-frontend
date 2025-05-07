@@ -77,3 +77,38 @@
     font-size: 2.5rem;
     font-weight: 500;
 }
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .aboutSectionContainer .imgContainer {
+        width: 100%;
+        position: relative;
+        max-height: 400px;
+    }
+
+    .contentContainer {
+        width: 100%;
+    }
+
+    .overlappingSection {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .overlappingSection .cardContainer {
+        width: 100%;
+    }
+
+    .overlappingSection .statsGrid {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .overlappingSection .statsGrid .statsContainer {
+        text-align: center;
+    }
+}
