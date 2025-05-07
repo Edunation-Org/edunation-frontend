@@ -9,13 +9,48 @@ const Footer = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Name validation
+    if (!formData.name || formData.name.length < 2 || formData.name.length > 100) {
+      newErrors.name = "Name must be between 2 and 100 characters.";
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email || !emailRegex.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    // Phone number validation
+    if (!formData.phoneNumber || formData.phoneNumber.length < 8 || formData.phoneNumber.length > 20) {
+      newErrors.phoneNumber = "Phone number must be between 8 and 20 characters.";
+    }
+
+    // Message validation
+    if (!formData.message || formData.message.length < 10 || formData.message.length > 3000) {
+      newErrors.message = "Message must be between 10 and 3000 characters.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if no errors
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: "" }); // Clear error for the field being edited
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      return; // Stop submission if validation fails
+    }
+
     try {
       const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/contact`, {
         method: "POST",
@@ -52,6 +87,7 @@ const Footer = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.name && <p className={s.errorText}>{errors.name}</p>}
             </label>
             <label>
               Email:
@@ -62,6 +98,7 @@ const Footer = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.email && <p className={s.errorText}>{errors.email}</p>}
             </label>
             <label>
               Phone Number:
@@ -72,6 +109,7 @@ const Footer = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.phoneNumber && <p className={s.errorText}>{errors.phoneNumber}</p>}
             </label>
             <label>
               Message:
@@ -81,6 +119,7 @@ const Footer = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.message && <p className={s.errorText}>{errors.message}</p>}
             </label>
             <button type="submit">Send Message</button>
           </form>
