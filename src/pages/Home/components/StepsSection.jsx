@@ -36,23 +36,25 @@ export default function StepsSection() {
             {/* <button className="titleFont">See How It Works</button> */}
           </div>
         </div>
-        <div className={s.courseButtonContainer}>
-          <Link to={"/subjects"}>
-            <button className="titleFont">
-              View
-              <br />
-              Courses Now
-            </button>
-          </Link>
-        </div>
-        <div className={s.statsContainer}>
-          <div className={s.stat}>
-            <h2>10K +</h2>
-            <p>Happy Students</p>
+        <div className={s.subContentContainer}>
+          <div className={s.courseButtonContainer}>
+            <Link to={"/subjects"}>
+              <button className="titleFont">
+                View
+                <br />
+                Courses Now
+              </button>
+            </Link>
           </div>
-          <div className={s.stat}>
-            <h2>10K +</h2>
-            <p>Happy Students</p>
+          <div className={s.statsContainer}>
+            <div className={s.stat}>
+              <h2>10K +</h2>
+              <p>Happy Students</p>
+            </div>
+            <div className={s.stat}>
+              <h2>10K +</h2>
+              <p>Happy Students</p>
+            </div>
           </div>
         </div>
       </div>

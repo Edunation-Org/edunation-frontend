@@ -75,3 +75,12 @@
 .cardContainer:hover p {
     color: var(--light-color);
 }
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .guidanceSectionGrid .gridWrapper {
+        grid-template-columns: 1fr;
+    }
+}
