@@ -51,7 +51,7 @@ export default function Navbar(props) {
   return (
     <nav ref={navRef} className={props.isColored ? s.colored : ""}>
       <div className={s.logoContainer}>
-        <Link to="/home">
+        <Link to="/">
           <h2>Edunation</h2>
         </Link>
       </div>

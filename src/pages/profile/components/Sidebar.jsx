@@ -6,7 +6,7 @@ export default function Sidebar() {
   return (
     <div className={s.sidebarContainer}>
       <div className={s.logoContainer}>
-        <NavLink to="/home">
+        <NavLink to="/">
           <h2>Edunation</h2>
         </NavLink>
       </div>
