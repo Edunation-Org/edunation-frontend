@@ -180,3 +180,85 @@ nav.colored {
     background: var(--sec-color);
     border: 1px solid var(--sec-color);
 }
+
+
+/* Sidebar */
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+    animation: slideInLeft 0.3s forwards;
+}
+
+.sidebarContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    z-index: 999;
+    height: 100vh;
+    display: none;
+    animation: slideInRight 0.3s forwards;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    background: var(--light-color);
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.openSidebar {
+    display: flex;
+}
+
+.sidebarButton {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.sidebarContainer .sidebarButton {
+    margin: 1.5rem 1.5rem 0 auto;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .buttonsContainer {
+        display: none;
+    }
+
+    .sidebarButton {
+        display: flex;
+    }
+}
