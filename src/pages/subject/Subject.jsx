@@ -99,17 +99,15 @@ function Subject() {
       );
 
       if (response.status === 201) {
-        handleSnackbar("Course booked successfully!");
+        Navigate("/profile/dashboard");
       } else {
         handleSnackbar(
-          "Error booking course:",
-          response.data.errorDetails.message
+          `Error booking course: ${response.data.errorDetails.message}`
         );
       }
     } catch (error) {
       handleSnackbar(
-        "Error booking course:",
-        error.response.data.errorDetails.message
+        `Error booking course: ${error.response.data.errorDetails.message}`
       );
     } finally {
       setLoading(false);

@@ -1,5 +1,4 @@
 import s from "../styles/Header.module.css";
-import HeaderImage from "../images/subjects-header.jpg";
 
 export default function Header() {
   return (
@@ -12,7 +11,7 @@ export default function Header() {
         </h1>
       </div>
       <div className={s.headerImageContainer}>
-        <img src={HeaderImage} alt="header" />
+        {/* <img src={HeaderImage} alt="header" /> */}
       </div>
     </div>
   );
