@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import s from "./Complete-Profile.module.css";
 import AuthContext from "../../authentication/AuthContext";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -28,6 +28,51 @@ const gradeLevels = [
 
 const contactMethods = ["Call", "Text", "Email"];
 
+const subjects = [
+  "Math",
+  "English",
+  "Science",
+  "History",
+  "SAT / ACT",
+  "AP / IB Courses",
+  "Homework Help",
+  "Study Skills",
+];
+
+const learningGoals = [
+  "Improve grades",
+  "Build confidence",
+  "Get ahead / enrichment",
+  "Prepare for a test",
+  "Learn at my own pace",
+];
+
+const learningStyles = [
+  "I learn best through examples and practice",
+  "I prefer visual aids (diagrams, videos)",
+  "I like step-by-step breakdowns",
+  "I prefer real-life applications or stories",
+  "I enjoy fast-paced sessions",
+  "I need someone very patient",
+];
+
+const personalityMatches = [
+  "Friendly and energetic",
+  "Calm and encouraging",
+  "Funny and relatable",
+  "Super focused and efficient",
+  "Open to chat and build a relationship",
+  "Doesn’t matter, just someone who explains clearly",
+];
+
+const schedulingPreferences = [
+  "Morning",
+  "Afternoon",
+  "Night",
+  "Weekdays",
+  "Weekends",
+];
+
 export default function CompleteProfile() {
   const { completeProfile } = useContext(AuthContext);
 
@@ -50,6 +95,15 @@ export default function CompleteProfile() {
     preferredContactMethod: "Email",
     gradeLevel: "",
     schoolName: "",
+    subjectsNeeded: [],
+    learningGoals: [],
+    learningStyles: [],
+    preferredTutors: [],
+    schedulingPreferences: [],
+    otherSubjects: "",
+    otherGoals: "",
+    otherStyles: "",
+    otherMatch: "",
   });
 
   const [open, setOpen] = useState(false);
@@ -83,33 +137,29 @@ export default function CompleteProfile() {
   }, []);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    if (name === "state") {
+    const { name, value, type, checked } = e.target;
+    if (type === "checkbox") {
+      const listName = name.split("_")[0];
+      setFormData((prev) => {
+        const updatedList = checked
+          ? [...prev[listName], value]
+          : prev[listName].filter((item) => item !== value);
+        return { ...prev, [listName]: updatedList };
+      });
+    } else if (name === "state") {
       const cities = City.getCitiesOfState("US", value);
       setCities(cities);
-
       setFormData((prev) => ({
         ...prev,
-        address: {
-          ...prev.address,
-          state: value,
-          city: "", // reset city when state changes
-        },
+        address: { ...prev.address, state: value, city: "" },
       }));
     } else if (name === "city") {
       setFormData((prev) => ({
         ...prev,
-        address: {
-          ...prev.address,
-          city: value,
-        },
+        address: { ...prev.address, city: value },
       }));
     } else {
-      setFormData((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
+      setFormData((prev) => ({ ...prev, [name]: value }));
     }
   };
 
@@ -123,7 +173,28 @@ export default function CompleteProfile() {
       firstName: toTitleCase(formData.firstName),
       lastName: toTitleCase(formData.lastName),
       guardianName: toTitleCase(formData.guardianName),
+      subjectsNeeded: [
+        ...formData.subjectsNeeded,
+        ...(formData.otherSubjects ? [formData.otherSubjects] : []),
+      ],
+      learningGoals: [
+        ...formData.learningGoals,
+        ...(formData.otherGoals ? [formData.otherGoals] : []),
+      ],
+      learningStyles: [
+        ...formData.learningStyles,
+        ...(formData.otherStyles ? [formData.otherStyles] : []),
+      ],
+      preferredTutors: [
+        ...formData.preferredTutors,
+        ...(formData.otherMatch ? [formData.otherMatch] : []),
+      ],
     };
+
+    delete formattedData.otherSubjects;
+    delete formattedData.otherGoals;
+    delete formattedData.otherStyles;
+    delete formattedData.otherMatch;
 
     try {
       const result = await completeProfile(formattedData);
@@ -154,7 +225,13 @@ export default function CompleteProfile() {
     formData.address.state &&
     formData.birthDate &&
     formData.gradeLevel &&
-    (!isUnderage || formData.guardianName);
+    (!isUnderage || formData.guardianName) &&
+    formData.preferredContactMethod &&
+    formData.subjectsNeeded.length > 0 &&
+    formData.learningGoals.length > 0 &&
+    formData.learningStyles.length > 0 &&
+    formData.preferredTutors.length > 0 &&
+    formData.schedulingPreferences.length > 0;
 
   return (
     <>
@@ -240,8 +317,8 @@ export default function CompleteProfile() {
           />
 
           <div>
-            <label>
-              <h3>Preferred Contact Method:</h3>
+            <label className="flex-between">
+              <h3>📞 Preferred Contact Method:</h3>
             </label>
             <div className={s.contactMethodContainer}>
               {contactMethods.map((method) => (
@@ -260,8 +337,8 @@ export default function CompleteProfile() {
           </div>
 
           <div className={s.gradeLevelContainer}>
-            <label>
-              <h3>Grade Level:</h3>
+            <label className="flex-between">
+              <h3>🎓 Grade Level:</h3>
             </label>
             <select
               name="gradeLevel"
@@ -277,6 +354,123 @@ export default function CompleteProfile() {
                 </option>
               ))}
             </select>
+          </div>
+
+          <div className={s.checkboxGroup}>
+            <label>
+              <h3>📚 Subjects Needing Help With</h3>
+            </label>
+            {subjects.map((subject) => (
+              <label key={subject} className={s.checkBoxInput}>
+                <input
+                  type="checkbox"
+                  name="subjectsNeeded"
+                  value={subject}
+                  onChange={handleChange}
+                />
+                {subject}
+              </label>
+            ))}
+            <input
+              type="text"
+              name="otherSubjects"
+              placeholder="Other"
+              className={s.otherInput}
+              value={formData.otherSubjects}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className={s.checkboxGroup}>
+            <label>
+              <h3>🎯 Learning Goals</h3>
+            </label>
+            {learningGoals.map((goal) => (
+              <label key={goal} className={s.checkBoxInput}>
+                <input
+                  type="checkbox"
+                  name="learningGoals"
+                  value={goal}
+                  onChange={handleChange}
+                />
+                {goal}
+              </label>
+            ))}
+            <input
+              type="text"
+              name="otherGoals"
+              placeholder="Other"
+              className={s.otherInput}
+              value={formData.otherGoals}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className={s.checkboxGroup}>
+            <label>
+              <h3>📝 Preferred Learning Style</h3>
+            </label>
+            {learningStyles.map((style) => (
+              <label key={style} className={s.checkBoxInput}>
+                <input
+                  type="checkbox"
+                  name="learningStyles"
+                  value={style}
+                  onChange={handleChange}
+                />
+                {style}
+              </label>
+            ))}
+            <input
+              type="text"
+              name="otherStyles"
+              placeholder="Other"
+              className={s.otherInput}
+              value={formData.otherStyles}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className={s.checkboxGroup}>
+            <label>
+              <h3>🧠 Personality Match</h3>
+            </label>
+            {personalityMatches.map((match) => (
+              <label key={match} className={s.checkBoxInput}>
+                <input
+                  type="checkbox"
+                  name="preferredTutors"
+                  value={match}
+                  onChange={handleChange}
+                />
+                {match}
+              </label>
+            ))}
+            <input
+              type="text"
+              name="otherMatch"
+              placeholder="Other"
+              className={s.otherInput}
+              value={formData.otherMatch}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className={s.checkboxGroup}>
+            <label>
+              <h3>📅 Scheduling Preferences</h3>
+            </label>
+            {schedulingPreferences.map((preference) => (
+              <label key={preference} className={s.checkBoxInput}>
+                <input
+                  type="checkbox"
+                  name="schedulingPreferences"
+                  value={preference}
+                  onChange={handleChange}
+                />
+                {preference}
+              </label>
+            ))}
           </div>
 
           {loading ? (
