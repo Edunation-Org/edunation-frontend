@@ -115,9 +115,17 @@ export default function Navbar(props) {
             </div>
           </div>
 
-          <a href="mailto:info@edunationalacademy.com">
-            <button className={s.contactButton}>Contact Us</button>
-          </a>
+          <button
+            className={s.contactButton}
+            onClick={() => {
+              const contactSection = document.getElementById("contact-section");
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Contact Us
+          </button>
 
           {user ? (
             <Link to="/wallet">

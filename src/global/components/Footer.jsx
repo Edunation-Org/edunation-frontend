@@ -72,7 +72,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className={s.footerContainer}>
+    <footer id="contact-section" className={s.footerContainer}>
       <h2 className={s.footerTitle}>Contact Us</h2>
       <div className={s.footerContent}>
         <div className={s.contactForm}>

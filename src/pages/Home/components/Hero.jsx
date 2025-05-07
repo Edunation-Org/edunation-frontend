@@ -31,9 +31,17 @@ export default function Hero() {
             </div>
             <div className={s.contactContainer}>
               <img src={Arrow} alt="" />
-              <a href="mailto:info@edunationalacademy.com">
-                <button>Contact Us</button>
-              </a>
+              <button
+                className={s.contactButton}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact-section");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                Contact Us
+              </button>
             </div>
           </div>
         </div>
