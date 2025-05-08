@@ -113,7 +113,7 @@
 .walletWarnings p {
     font-size: var(--small-fs);
     font-weight: 500;
-    color: var(--grey-color);
+    color: var(--dark-grey-color);
 }
 
 
@@ -159,6 +159,55 @@
 
 .walletHistory p {
     font-size: var(--small-fs);
-    color: var(--grey-color);
+    color: var(--dark-grey-color);
     margin-top: 0.5rem;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .walletContainer {
+        width: 100%;
+        height: auto;
+    }
+
+    .walletWrapper {
+        margin-top: 8rem;
+        width: 100%;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .walletWrapper h1 {
+        font-size: var(--sec-fs);
+    }
+
+    .walletContent {
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .walletForm {
+        width: 100%;
+        gap: 0;
+    }
+
+    .inputWrapper {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .inputWrapper input {
+        width: 100%;
+    }
+
+    .walletInfo {
+        margin: 5rem 0;
+    }
+
+    .walletHistory {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
 }
