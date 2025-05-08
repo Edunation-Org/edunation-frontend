@@ -77,7 +77,7 @@ export default function Navbar(props) {
         <div className={s.overlay} onClick={() => toggleSidebar()}></div>
         <div className={s.logoContainer}>
           <Link to="/">
-            <h2>Edunational Learning Academy</h2>
+            <h2>EDUNATIONAL LEARNING ACADEMY</h2>
           </Link>
         </div>
         <button className={s.sidebarButton} onClick={() => toggleSidebar()}>
