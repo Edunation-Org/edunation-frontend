@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import AuthContext from "../../../authentication/AuthContext";
 import s from "../styles/Profile-Sidebar.module.css";
-import { PowerIcon } from "@heroicons/react/16/solid";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 export default function ProfileSidebar({ fullName, pastReservations }) {
   let { logout } = useContext(AuthContext);
@@ -10,7 +10,7 @@ export default function ProfileSidebar({ fullName, pastReservations }) {
     <div className={s.profileSidebarContainer}>
       <button className={s.logoutButton} onClick={logout}>
         <h3>Logout</h3>
-        <PowerIcon className={s.icon} />
+        <LogoutIcon className={s.icon} />
       </button>
       <div className={s.profileDetails}>
         <div className={s.imgContainer}></div>

@@ -36,3 +36,9 @@ li {
     align-items: center;
     justify-content: space-between;
 }
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: var(--big-fs);
+    }
+}

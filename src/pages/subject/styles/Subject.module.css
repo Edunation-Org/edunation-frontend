@@ -55,7 +55,7 @@
 .totalContainer h2 {
     font-size: var(--small-fs);
     font-weight: 600;
-    color: var(--grey-color);
+    color: var(--dark-grey-color);
 }
 
 .totalContainer h1 {
@@ -126,4 +126,54 @@
     font-size: var(--main-fs);
     font-weight: 600;
     color: var(--dark-grey-color);
+}
+
+/* Media Quieries */
+
+@media (max-width: 1200px) {
+    .subjectContainer {
+        height: 100%;
+        margin-top: 8rem;
+        margin-bottom: 5rem;
+    }
+
+    .subjectWrapper {
+        flex-direction: column-reverse;
+    }
+
+    .reservationContainer {
+        width: 100%;
+    }
+
+    .reservationWrapper {
+        width: 100%;
+        margin-inline: 2rem;
+
+    }
+
+    .border {
+        display: none;
+    }
+
+    .inputContainer {
+        width: 100%;
+    }
+
+    .totalContainer {
+        margin: 0;
+    }
+
+    .btnContainer {
+        margin-top: 1rem;
+    }
+
+    .subjectDetailsContainer,
+    .subjectDetailsWrapper {
+        width: 100%;
+    }
+
+    .subjectDetailsWrapper {
+        padding: 0 2rem;
+    }
+
 }
