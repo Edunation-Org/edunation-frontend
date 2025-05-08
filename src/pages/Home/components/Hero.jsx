@@ -1,7 +1,7 @@
 import s from "../styles/Hero.module.css";
 import HeroImg from "../images/hero.svg";
 import Arrow from "../images/arrow.svg";
-import MathIcon from "../images/math-icon.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -12,9 +12,9 @@ export default function Hero() {
         </div>
         <div className={s.heroContentContainer}>
           <h1 className="titleFont">
-            Unlock Your
+            Empowering Every Learner,
             <br />
-            Potential
+            Everywhere.
           </h1>
           <div className={s.subContentContainer}>
             <div className={s.subContent}>
@@ -25,51 +25,17 @@ export default function Hero() {
                 <div className={s.imgFiller}></div>
               </div>
               <div className={s.subTextContainer}>
-                <h3 className="titleFont">300+</h3>
-                <p>Active Teachers</p>
+                <h3 className="titleFont">Dedicated to helping students thrive — with special care for underrepresented and underserved communities.</h3>
+                <p>50+ Active Teachers</p>
               </div>
             </div>
             <div className={s.contactContainer}>
               <img src={Arrow} alt="" />
-              <button
-                className={s.contactButton}
-                onClick={() => {
-                  const contactSection = document.getElementById("contact-section");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              >
-                Contact Us
-              </button>
+              <Link to="/login">
+                <button className={s.loginButton}>Start Learning</button>
+              </Link>
             </div>
           </div>
-        </div>
-      </div>
-      <div className={s.subjectsGraphicsContainer}>
-        <div className={s.graphicsContainer}>
-          <img src={MathIcon} alt="" />
-          <h2 className="titleFont">Math</h2>
-        </div>
-        <div className={s.graphicsContainer}>
-          <img src={MathIcon} alt="" />
-          <h2 className="titleFont">Math</h2>
-        </div>
-        <div className={s.graphicsContainer}>
-          <img src={MathIcon} alt="" />
-          <h2 className="titleFont">Math</h2>
-        </div>
-        <div className={s.graphicsContainer}>
-          <img src={MathIcon} alt="" />
-          <h2 className="titleFont">Math</h2>
-        </div>
-        <div className={s.graphicsContainer}>
-          <img src={MathIcon} alt="" />
-          <h2 className="titleFont">Math</h2>
-        </div>
-        <div className={s.graphicsContainer}>
-          <img src={MathIcon} alt="" />
-          <h2 className="titleFont">Math</h2>
         </div>
       </div>
     </>

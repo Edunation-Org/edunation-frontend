@@ -10,28 +10,30 @@ export default function AboutSection() {
         </div>
         <div className={s.contentContainer}>
           <div className={s.titleContainer}>
-            <h1 className="titleFont">Discover Your Path to Excellence</h1>
+            <h1 className="titleFont">Guiding Potential, Shaping Futures</h1>
           </div>
           <div className={s.descriptionContainer}>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-              doloribus ducimus, minima numquam provident ex commodi nostrum
-              repellendus ea? Tempore fuga aperiam pariatur corrupti quas
-              voluptates tempora necessitatibus et quae.
+              Every student has a unique story. 
+              We meet them where they are — with empathy, expertise, and culturally responsive teaching 
+              that helps them grow with confidence.
             </p>
           </div>
         </div>
         <div className={s.overlappingSection}>
           <div className={s.cardContainer}>
             <h3 className="titleFont">
-              A Place For Bright
+              Our mission at Edunation Academy is to provide inclusive, 
+              high-quality tutoring that empowers students of all backgrounds — 
+              especially those from underserved and underrepresented communities — 
+              to succeed academically and grow with confidence.
               <br />
-              Minds
             </h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              doloremque. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Quisquam, doloremque.
+              We envision a world where every student has equal access to educational support,
+               personalized guidance, and the encouragement they need to reach their full potential — 
+               no matter their starting point.
+
             </p>
           </div>
           <div className={s.statsGrid}>
@@ -40,16 +42,8 @@ export default function AboutSection() {
               <p>Students</p>
             </div>
             <div className={s.statsContainer}>
-              <h2 className="titleFont">300 +</h2>
-              <p>Students</p>
-            </div>
-            <div className={s.statsContainer}>
-              <h2 className="titleFont">300 +</h2>
-              <p>Students</p>
-            </div>
-            <div className={s.statsContainer}>
-              <h2 className="titleFont">300 +</h2>
-              <p>Students</p>
+              <h2 className="titleFont">50 +</h2>
+              <p>Tutors</p>
             </div>
           </div>
         </div>

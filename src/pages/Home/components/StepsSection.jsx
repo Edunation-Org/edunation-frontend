@@ -1,6 +1,5 @@
 import s from "../styles/StepsSection.module.css";
 import StepsImg from "../images/steps.jpg";
-import { Link } from "react-router-dom";
 
 export default function StepsSection() {
   return (
@@ -20,13 +19,13 @@ export default function StepsSection() {
           </div>
           <div className={s.journeyContent}>
             <h1 className="titleFont">
-              Start Your Journey Now With Just A Few Steps
+              Start Strong. Stay Ahead.
             </h1>
             <div className={s.description}>
               <p>
-                Our mission is to provide accessible, flexible, and impactful
-                education that empowers individuals to achieve their personal
-                and professional goals. Join a vibrant community.
+                Our mission is to make high-quality tutoring accessible and impactful — 
+                especially for students who need it most. Join a learning community built on support, 
+                opportunity, and success.
               </p>
               <p>
                 We offer a diverse range of high-quality online courses designed
@@ -34,27 +33,6 @@ export default function StepsSection() {
               </p>
             </div>
             {/* <button className="titleFont">See How It Works</button> */}
-          </div>
-        </div>
-        <div className={s.subContentContainer}>
-          <div className={s.courseButtonContainer}>
-            <Link to={"/subjects"}>
-              <button className="titleFont">
-                View
-                <br />
-                Courses Now
-              </button>
-            </Link>
-          </div>
-          <div className={s.statsContainer}>
-            <div className={s.stat}>
-              <h2>10K +</h2>
-              <p>Happy Students</p>
-            </div>
-            <div className={s.stat}>
-              <h2>10K +</h2>
-              <p>Happy Students</p>
-            </div>
           </div>
         </div>
       </div>

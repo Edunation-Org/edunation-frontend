@@ -14,10 +14,7 @@ export default function GuidanceSection() {
         </div>
         <div className={s.descriptionContainer}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            maxime a odit minus praesentium et quam magni alias quibusdam ipsa
-            quisquam, omnis, odio beatae accusantium ipsam. Nisi esse earum
-            ipsam?
+            Personalized Tutoring for Every Student’s Journey
           </p>
         </div>
         <div className={s.cardContainer}>
@@ -25,14 +22,15 @@ export default function GuidanceSection() {
             <CalendarDaysIcon className={s.cardIcon} />
           </div>
           <h2>
-            A Place For Bright
+            Rooted in Equity,
             <br />
-            Minds
+            Driven by Excellence
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim,
-            laborum dignissimos itaque, nisi voluptate quibusdam a, eos numquam
-            eveniet quasi. Optio, sit fugiat impedit odit vitae ducimus vel non!
+            We provide expert support across subjects and levels, 
+            helping students master their goals — whether it's catching up, 
+            staying on track, or getting ahead.
+
           </p>
         </div>
         <div className={s.cardContainer}>
@@ -40,44 +38,13 @@ export default function GuidanceSection() {
             <CalendarDaysIcon className={s.cardIcon} />
           </div>
           <h2>
-            A Place For Bright
+            Discover Your Path to Excellence
             <br />
-            Minds
+            Equity in Education Starts Here
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim,
-            laborum dignissimos itaque, nisi voluptate quibusdam a, eos numquam
-            eveniet quasi. Optio, sit fugiat impedit odit vitae ducimus vel non!
-          </p>
-        </div>
-        <div className={s.cardContainer}>
-          <div className={s.iconContainer}>
-            <CalendarDaysIcon className={s.cardIcon} />
-          </div>
-          <h2>
-            A Place For Bright
-            <br />
-            Minds
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim,
-            laborum dignissimos itaque, nisi voluptate quibusdam a, eos numquam
-            eveniet quasi. Optio, sit fugiat impedit odit vitae ducimus vel non!
-          </p>
-        </div>
-        <div className={s.cardContainer}>
-          <div className={s.iconContainer}>
-            <CalendarDaysIcon className={s.cardIcon} />
-          </div>
-          <h2>
-            A Place For Bright
-            <br />
-            Minds
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim,
-            laborum dignissimos itaque, nisi voluptate quibusdam a, eos numquam
-            eveniet quasi. Optio, sit fugiat impedit odit vitae ducimus vel non!
+            At Edunation, we believe every student deserves a chance to succeed. Our inclusive 
+            tutoring programs lift up learners from all backgrounds — because education should never be one-size-fits-all.
           </p>
         </div>
       </div>
