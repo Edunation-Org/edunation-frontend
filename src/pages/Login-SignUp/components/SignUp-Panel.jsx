@@ -5,7 +5,7 @@ function SignUpPanel() {
   return (
     <div className="panel right-panel">
       <div className="content">
-        <h3>Already with Edunation?</h3>
+        <h3>Already with EDUNATIONAL LEARNING ACADEMY?</h3>
         <p>
           Welcome back to your learning community. Let’s pick up right where you left off and keep working toward your goals.
         </p>

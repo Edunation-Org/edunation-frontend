@@ -43,7 +43,7 @@ export default function GuidanceSection() {
             Equity in Education Starts Here
           </h2>
           <p>
-            At Edunation, we believe every student deserves a chance to succeed. Our inclusive 
+            At EDUNATIONAL LEARNING ACADEMY, we believe every student deserves a chance to succeed. Our inclusive 
             tutoring programs lift up learners from all backgrounds — because education should never be one-size-fits-all.
           </p>
         </div>

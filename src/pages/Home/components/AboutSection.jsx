@@ -23,9 +23,9 @@ export default function AboutSection() {
         <div className={s.overlappingSection}>
           <div className={s.cardContainer}>
             <h3 className="titleFont">
-              Our mission at Edunation Academy is to provide inclusive, 
-              high-quality tutoring that empowers students of all backgrounds — 
-              especially those from underserved and underrepresented communities — 
+              Our mission at EDUNATIONAL LEARNING ACADEMY is to provide inclusive,
+              high-quality tutoring that empowers students of all backgrounds —
+              especially those from underserved and underrepresented communities —
               to succeed academically and grow with confidence.
               <br />
             </h3>
