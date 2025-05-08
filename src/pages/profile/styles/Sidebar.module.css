@@ -1,9 +1,20 @@
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .sidebarContainer {
     position: sticky;
     width: max-content;
     height: 100vh;
     background-color: var(--accent-color);
     padding: 1.5rem 0 0 4rem;
+    animation: slideInLeft 0.3s ease-in-out;
 }
 
 .logoContainer {
@@ -14,6 +25,20 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+#homeLink,
+#logoutLink {
+    display: none;
+}
+
+#logoutLink {
+    margin-bottom: 2rem;
+}
+
+#logoutLink .sidebarIcon,
+#logoutLink p {
+    color: var(--sec-color);
 }
 
 .sidebarLink {
@@ -59,4 +84,48 @@ a.active .sidebarLink::after {
     height: 100%;
     background-color: var(--sec-color);
     border-radius: 20px;
+}
+
+.sidebarButton {
+    display: none;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .sidebarContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #homeLink,
+    #logoutLink {
+        display: flex;
+    }
+
+    .sidebarLinks {
+        margin-top: 3.5rem;
+    }
+
+    .logoContainer {
+        display: none;
+    }
+
+    .sidebarButton {
+        display: block;
+    }
 }

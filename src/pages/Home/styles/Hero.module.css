@@ -129,6 +129,16 @@
         gap: 3rem;
     }
 
+    .heroContainer .imgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroContainer .imgContainer img {
+        width: 70%;
+    }
+
     .heroContentContainer {
         width: 100%;
         align-items: center;

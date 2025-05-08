@@ -225,7 +225,7 @@ function Subject() {
               </div>
               <div className={s.subjectPrice}>
                 <h2>
-                  {course ? `Price: $${course.price}` : "Price: $100"}
+                  {course ? `Price: $${course.price}` : "Error fetching price"}
                   <small>/hr</small>
                 </h2>
               </div>

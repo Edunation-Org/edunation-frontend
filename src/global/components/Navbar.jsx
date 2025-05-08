@@ -22,7 +22,6 @@ export default function Navbar(props) {
     const sidebarContainer = document.querySelector(`.${s.sidebarContainer}`);
     const overlay = document.querySelector(`.${s.overlay}`);
 
-    console.log("🚀 ~ toggleSidebar ~ overlay:", overlay);
     if (sidebarContainer && overlay) {
       if (!openSidebar) {
         sidebarContainer.style.display = "flex";

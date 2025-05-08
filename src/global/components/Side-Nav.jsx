@@ -11,6 +11,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import { ListSubheader } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
 export default function SideNav({ courses }) {
   const [open, setOpen] = useState(true);
@@ -45,6 +46,25 @@ export default function SideNav({ courses }) {
           </ListItemIcon>
           <ListItemText
             primary="Profile"
+            sx={{
+              fontSize: "1.2em",
+              color: "#737373",
+            }}
+          />
+        </ListItemButton>
+      </Link>
+      <Link to="/wallet" style={{ width: "100%" }}>
+        <ListItemButton
+          sx={{
+            width: "100%",
+            pl: 5,
+          }}
+        >
+          <ListItemIcon>
+            <AccountBalanceWalletIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Wallet"
             sx={{
               fontSize: "1.2em",
               color: "#737373",
