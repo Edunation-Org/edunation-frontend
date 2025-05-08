@@ -220,7 +220,7 @@ nav.colored {
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 80%;
     z-index: 999;
     height: 100vh;
     display: none;
@@ -254,6 +254,10 @@ nav.colored {
 /* Media Queries */
 
 @media (max-width: 768px) {
+    nav {
+        padding: 1.5rem 2rem;
+    }
+
     .buttonsContainer {
         display: none;
     }
