@@ -261,4 +261,8 @@ nav.colored {
     .sidebarButton {
         display: flex;
     }
+    .navLinks {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }

@@ -50,3 +50,10 @@
 .cardContainer:hover .cardButtonContainer button {
     opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .cardContainer {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

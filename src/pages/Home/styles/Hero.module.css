@@ -163,3 +163,18 @@
         padding: 1.2rem 0;
     }
 }
+
+@media (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .imgContainer {
+    width: 100%;
+    min-width: auto;
+  }
+  .heroContentContainer {
+    align-items: center;
+    text-align: center;
+  }
+}
