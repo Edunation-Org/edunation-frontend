@@ -99,3 +99,29 @@
     align-items: center;
     padding: 1rem 2rem;
 }
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .logoutButton {
+        display: none;
+    }
+
+    .profileDetails {
+        display: none;
+    }
+
+    .profileSidebarContainer {
+        width: 90%;
+        padding: 0;
+        margin-inline: auto;
+    }
+
+    .prevClassesContainer {
+        width: 100%;
+        border: 1px solid var(--grey-color);
+        padding: 2rem;
+        border-radius: 20px;
+        margin-bottom: 3rem;
+    }
+}
