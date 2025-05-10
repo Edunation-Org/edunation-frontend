@@ -1,0 +1,152 @@
+.footerContainer {
+  background: var(--sec-color);
+  padding: 3rem 5rem;
+}
+
+.footerTitle {
+  font-size: var(--big-fs);
+  margin-bottom: 2rem;
+  color: var(--light-color);
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.contactForm {
+  border: 1px solid var(--light-color);
+  border-radius: 20px;
+  width: 50%;
+  padding: 2rem;
+  flex: 1;
+  max-width: 1200px;
+}
+
+.contactForm h3 {
+  font-size: var(--sec-fs);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--light-color);
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: var(--small-fs);
+  background: var(--light-color);
+  border: none;
+  border-bottom: 1px solid var(--light-color);
+  outline: none;
+  font-family: inherit;
+}
+
+.contactForm button {
+  color: var(--light-color);
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--small-fs);
+  font-weight: 400;
+  margin-top: 2rem;
+  font-family: inherit;
+  background: var(--sec-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.contactForm button:hover {
+  background: var(--light-color);
+  color: var(--sec-color);
+  font-weight: 500;
+}
+
+.contactDirectly {
+  background: var(--light-color);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.contactDirectly h3 {
+  font-size: var(--sec-fs);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--sec-color);
+}
+
+.contactDirectly p {
+  font-size: var(--main-fs);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--sec-color);
+}
+
+.contactDirectly ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contactDirectly li {
+  margin: 5px 0;
+  font-size: var(--small-fs);
+  font-weight: 500;
+  color: var(--sec-color);
+}
+
+.errorText {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+@media (max-width: 1200px) {
+  .footerContainer {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .footerTitle {
+    font-size: var(--big-fs);
+  }
+
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .contactForm {
+    width: 100%;
+  }
+
+  .contactForm button {
+    margin-inline: auto;
+    background: var(--light-color);
+    color: var(--sec-color);
+    font-weight: 600;
+  }
+
+  .contactDirectly {
+    width: 100%;
+  }
+
+}

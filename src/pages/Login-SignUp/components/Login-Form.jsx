@@ -74,6 +74,9 @@ function LoginForm() {
             onChange={handleChange}
           />
         </div>
+        <p>
+          Welcome back. Let’s keep learning and growing — together.
+        </p>
         {loading ? (
           <ClipLoader
             color="#41246D"

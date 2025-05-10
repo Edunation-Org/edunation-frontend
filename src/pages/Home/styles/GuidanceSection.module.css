@@ -1,28 +1,31 @@
-.guidanceSectionGrid {
+.guidanceSectionContainer {
     width: 80%;
     margin: 0 auto;
 }
 
-.guidanceSectionGrid .gridWrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
-    row-gap: 2rem;
-}
-
-.gridWrapper .titleContainer h1 {
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
     font-size: 4rem;
 }
 
-.gridWrapper .descriptionContainer {
-    align-content: end;
-    padding-bottom: 1rem;
+.titleContainer p {
+    padding: 1.2rem 0;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
 .cardContainer {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     gap: 1.5rem;
     padding: 3rem 4rem;
@@ -30,30 +33,25 @@
     transition: all 0.3s ease;
 }
 
-.cardContainer:nth-child(3) {
-    background-color: var(--main-color);
-    color: var(--light-color);
-}
-
-.cardContainer:nth-child(3) h2,
-.cardContainer:nth-child(3) p {
-    color: var(--light-color);
-}
-
 .cardContainer:hover {
     background-color: var(--main-color);
 }
 
-.cardContainer .iconContainer {
-    width: 7%;
+.cardContainer.coloredCard {
+    background: var(--main-color);
+    color: var(--light-color);
 }
 
-.cardContainer .iconContainer .cardIcon {
-    width: 100%;
+.cardContainer.coloredCard h2,
+.cardContainer.coloredCard p {
+    color: var(--light-color);
+}
+
+.cardContainer .cardIcon {
     transition: all 0.3s ease;
 }
 
-.cardContainer:hover .iconContainer .cardIcon {
+.cardContainer:hover .cardIcon {
     color: var(--light-color);
 }
 
@@ -79,8 +77,13 @@
 
 /* Media Queries */
 
+
 @media (max-width: 1200px) {
-    .guidanceSectionGrid .gridWrapper {
+    .titleContainer h1 {
+        font-size: var(--big-fs);
+    }
+
+    .cardsContainer {
         grid-template-columns: 1fr;
     }
 }

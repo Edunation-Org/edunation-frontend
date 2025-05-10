@@ -190,8 +190,8 @@ export default function Dashboard() {
               Hello {userProfile ? userProfile.firstName : "Loading..."}!
             </h2>
             <p className={s.quote}>
-              “Education is the ability to listen to almost anything without
-              losing your temper or your self-confidence.”
+              “You’re on the path to success. Whether you're here for a quick boost or long-term support,
+               we’re excited to work with you. Your goals are our goals — let’s achieve them together.”
             </p>
           </div>
           <div className={s.imageContainer}>

@@ -19,7 +19,7 @@
   --main-color: #87CEEB;
   --sec-color: #1A1A80;
   --accent-color: #E0F6FF;
-  --large-fs: 6rem;
+  --large-fs: 5rem;
   --big-fs: 4rem;
   --sec-fs: 1.8rem;
   --main-fs: 1.4rem;
@@ -53,5 +53,34 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Global responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
   }
 }

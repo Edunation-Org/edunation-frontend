@@ -12,6 +12,7 @@ import ResetPassword from "./pages/reset-password/Reset-Password.jsx";
 import CompleteProfile from "./pages/complete-profile/Complete-Profile.jsx";
 import Wallet from "./pages/wallet/Wallet.jsx";
 import Subject from "./pages/subject/Subject.jsx";
+import Footer from "./global/components/Footer.jsx";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           </Route>
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
+        <Footer />
       </AuthProvider>
     </BrowserRouter>
   );

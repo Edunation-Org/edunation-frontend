@@ -76,7 +76,7 @@ export default function Navbar(props) {
         <div className={s.overlay} onClick={() => toggleSidebar()}></div>
         <div className={s.logoContainer}>
           <Link to="/">
-            <h2>Edunation</h2>
+            <h2>EDUNATIONAL LEARNING ACADEMY</h2>
           </Link>
         </div>
         <button className={s.sidebarButton} onClick={() => toggleSidebar()}>
@@ -86,7 +86,7 @@ export default function Navbar(props) {
           <button className={s.sidebarButton} onClick={() => toggleSidebar()}>
             <CloseIcon fontSize="large" sx={{ color: "#1A1A80" }} />
           </button>
-          <SideNav courses={courses} />
+          <SideNav courses={courses} toggleSidebar={toggleSidebar} />
         </div>
         <div className={s.buttonsContainer}>
           <div className={s.dropDown}>
@@ -114,9 +114,17 @@ export default function Navbar(props) {
             </div>
           </div>
 
-          <a href="mailto:info@edunationalacademy.com">
-            <button className={s.contactButton}>Contact Us</button>
-          </a>
+          <button
+            className={s.contactButton}
+            onClick={() => {
+              const contactSection = document.getElementById("contact-section");
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Contact Us
+          </button>
 
           {user ? (
             <Link to="/wallet">

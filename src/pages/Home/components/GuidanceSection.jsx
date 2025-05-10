@@ -1,83 +1,44 @@
 import s from "../styles/GuidanceSection.module.css";
-import { CalendarDaysIcon } from "@heroicons/react/24/outline";
+import BalanceIcon from "@mui/icons-material/Balance";
+import SchoolIcon from "@mui/icons-material/School";
 
 export default function GuidanceSection() {
   return (
-    <div className={s.guidanceSectionGrid}>
-      <div className={s.gridWrapper}>
-        <div className={s.titleContainer}>
-          <h1 className="titleFont">
-            Expert Guidance For
+    <div className={s.guidanceSectionContainer}>
+      <div className={s.titleContainer}>
+        <h1 className="titleFont">
+          Expert Guidance
+          <br />
+          For Every Milestone
+        </h1>
+        <p>Personalized Tutoring for Every Student’s Journey</p>
+      </div>
+      <div className={s.cardsContainer}>
+        <div className={`${s.cardContainer} ${s.coloredCard}`}>
+          <SchoolIcon fontSize="large" />
+          <h2>
+            Rooted in Equity,
             <br />
-            Every Milestone
-          </h1>
-        </div>
-        <div className={s.descriptionContainer}>
+            Driven by Excellence
+          </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            maxime a odit minus praesentium et quam magni alias quibusdam ipsa
-            quisquam, omnis, odio beatae accusantium ipsam. Nisi esse earum
-            ipsam?
+            We provide expert support across subjects and levels, helping
+            students master their goals — whether it's catching up, staying on
+            track, or getting ahead.
           </p>
         </div>
         <div className={s.cardContainer}>
-          <div className={s.iconContainer}>
-            <CalendarDaysIcon className={s.cardIcon} />
-          </div>
+          <BalanceIcon fontSize="large" className={s.cardIcon} />
           <h2>
-            A Place For Bright
+            Discover Your Path to Excellence
             <br />
-            Minds
+            Equity in Education Starts Here
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim,
-            laborum dignissimos itaque, nisi voluptate quibusdam a, eos numquam
-            eveniet quasi. Optio, sit fugiat impedit odit vitae ducimus vel non!
-          </p>
-        </div>
-        <div className={s.cardContainer}>
-          <div className={s.iconContainer}>
-            <CalendarDaysIcon className={s.cardIcon} />
-          </div>
-          <h2>
-            A Place For Bright
-            <br />
-            Minds
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim,
-            laborum dignissimos itaque, nisi voluptate quibusdam a, eos numquam
-            eveniet quasi. Optio, sit fugiat impedit odit vitae ducimus vel non!
-          </p>
-        </div>
-        <div className={s.cardContainer}>
-          <div className={s.iconContainer}>
-            <CalendarDaysIcon className={s.cardIcon} />
-          </div>
-          <h2>
-            A Place For Bright
-            <br />
-            Minds
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim,
-            laborum dignissimos itaque, nisi voluptate quibusdam a, eos numquam
-            eveniet quasi. Optio, sit fugiat impedit odit vitae ducimus vel non!
-          </p>
-        </div>
-        <div className={s.cardContainer}>
-          <div className={s.iconContainer}>
-            <CalendarDaysIcon className={s.cardIcon} />
-          </div>
-          <h2>
-            A Place For Bright
-            <br />
-            Minds
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim,
-            laborum dignissimos itaque, nisi voluptate quibusdam a, eos numquam
-            eveniet quasi. Optio, sit fugiat impedit odit vitae ducimus vel non!
+            At EDUNATIONAL LEARNING ACADEMY, we believe every student deserves a
+            chance to succeed. Our inclusive tutoring programs lift up learners
+            from all backgrounds — because education should never be
+            one-size-fits-all.
           </p>
         </div>
       </div>

@@ -5,10 +5,9 @@ function SignUpPanel() {
   return (
     <div className="panel right-panel">
       <div className="content">
-        <h3>One of us ?</h3>
+        <h3>Already with EDUNATIONAL LEARNING ACADEMY?</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          laboriosam ad deleniti.
+          Welcome back to your learning community. Let’s pick up right where you left off and keep working toward your goals.
         </p>
         <button className="panel-btn" id="sign-in-btn">
           <ArrowLongLeftIcon className="signInIcon panel-btn-icon" />
