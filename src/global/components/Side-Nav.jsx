@@ -131,6 +131,7 @@ export default function SideNav({ courses, toggleSidebar }) {
                   color: "#1A1A80",
                   fontSize: "1.5rem",
                   fontWeight: "600",
+                  backgroundColor: "#FAFAFA",
                 }}
               >
                 {type}

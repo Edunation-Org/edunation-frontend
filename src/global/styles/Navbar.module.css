@@ -8,7 +8,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 4rem;
+    padding: 2rem 4rem;
     margin-bottom: 5rem;
     transition: all 0.3s;
 }
@@ -231,7 +231,7 @@ nav.colored {
     gap: 1rem;
     background: var(--light-color);
     box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
-
+    overflow-y: scroll;
 }
 
 .openSidebar {
@@ -265,6 +265,7 @@ nav.colored {
     .sidebarButton {
         display: flex;
     }
+
     .navLinks {
         flex-direction: column;
         gap: 1rem;

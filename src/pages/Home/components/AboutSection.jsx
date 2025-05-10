@@ -14,26 +14,9 @@ export default function AboutSection() {
           </div>
           <div className={s.descriptionContainer}>
             <p>
-              Every student has a unique story. 
-              We meet them where they are — with empathy, expertise, and culturally responsive teaching 
-              that helps them grow with confidence.
-            </p>
-          </div>
-        </div>
-        <div className={s.overlappingSection}>
-          <div className={s.cardContainer}>
-            <h3 className="titleFont">
-              Our mission at EDUNATIONAL LEARNING ACADEMY is to provide inclusive,
-              high-quality tutoring that empowers students of all backgrounds —
-              especially those from underserved and underrepresented communities —
-              to succeed academically and grow with confidence.
-              <br />
-            </h3>
-            <p>
-              We envision a world where every student has equal access to educational support,
-               personalized guidance, and the encouragement they need to reach their full potential — 
-               no matter their starting point.
-
+              Every student has a unique story. We meet them where they are —
+              with empathy, expertise, and culturally responsive teaching that
+              helps them grow with confidence.
             </p>
           </div>
           <div className={s.statsGrid}>
@@ -46,6 +29,21 @@ export default function AboutSection() {
               <p>Tutors</p>
             </div>
           </div>
+        </div>
+        <div className={s.cardContainer}>
+          <h3>
+            Our mission at EDUNATIONAL LEARNING ACADEMY is to provide inclusive,
+            high-quality tutoring that empowers students of all backgrounds —
+            especially those from underserved and underrepresented communities —
+            to succeed academically and grow with confidence.
+            <br />
+          </h3>
+          <p>
+            We envision a world where every student has equal access to
+            educational support, personalized guidance, and the encouragement
+            they need to reach their full potential — no matter their starting
+            point.
+          </p>
         </div>
       </div>
     </div>

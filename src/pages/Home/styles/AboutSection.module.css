@@ -42,35 +42,30 @@
     font-size: 4rem;
 }
 
-.overlappingSection {
+.cardContainer {
     width: 80%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.overlappingSection .cardContainer {
-    width: 60%;
     background-color: var(--accent-color);
     padding: 2rem 3rem;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     gap: 1rem;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.overlappingSection .cardContainer h3 {
-    font-size: 2.2rem;
+.cardContainer h3 {
+    font-size: var(--sec-fs);
     font-weight: 500;
 }
 
-.overlappingSection .statsGrid {
-    width: 30%;
+.statsGrid {
+    width: max-content;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
+    margin-top: 1rem;
 }
 
 .statsContainer h2 {
@@ -92,23 +87,23 @@
         width: 100%;
     }
 
-    .overlappingSection {
+    .cardContainer {
         width: 100%;
         flex-direction: column;
         align-items: center;
         gap: 3rem;
     }
 
-    .overlappingSection .cardContainer {
+    .cardContainer {
         width: 100%;
     }
 
-    .overlappingSection .statsGrid {
+    .statsGrid {
         width: 100%;
         gap: 2rem;
     }
 
-    .overlappingSection .statsGrid .statsContainer {
+    .statsGrid .statsContainer {
         text-align: center;
     }
 }
