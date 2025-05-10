@@ -115,13 +115,14 @@
         width: 90%;
         padding: 0;
         margin-inline: auto;
+        box-shadow: none;
     }
 
     .prevClassesContainer {
         width: 100%;
         border: 1px solid var(--grey-color);
         padding: 2rem;
+        margin: 3rem 0;
         border-radius: 20px;
-        margin-bottom: 3rem;
     }
 }
