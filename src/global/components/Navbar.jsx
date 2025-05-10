@@ -86,7 +86,7 @@ export default function Navbar(props) {
           <button className={s.sidebarButton} onClick={() => toggleSidebar()}>
             <CloseIcon fontSize="large" sx={{ color: "#1A1A80" }} />
           </button>
-          <SideNav courses={courses} />
+          <SideNav courses={courses} toggleSidebar={toggleSidebar} />
         </div>
         <div className={s.buttonsContainer}>
           <div className={s.dropDown}>

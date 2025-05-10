@@ -107,7 +107,7 @@
 .classCardContainer .dateTimeContainer .time {
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--grey-color);
+    color: var(--dark-grey-color);
 }
 
 .timeSpentContainer {
@@ -264,14 +264,64 @@
     gap: 1rem;
 }
 
+
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .dashboardHeader {
+        width: 90%;
+        margin-inline: auto;
+        margin-top: 5rem;
+    }
+
+    .dashboardContent {
+        width: 90%;
+        margin-inline: auto;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .classesContainer,
+    .timeSpentContainer {
+        width: 100% !important;
+    }
+
+    .classesContainer .classCardContainer {
+        width: 100%;
+    }
+
+    .timeSpentContainer .chartContainer {
+        width: 50%;
+    }
+}
+
+
 @media (max-width: 768px) {
-  .dashboardHeader {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-  .dashboardContent {
-    flex-direction: column;
-    gap: 2rem;
-  }
+    .dashboardHeader {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 2rem 0.5rem;
+    }
+
+    .dashboardHeader .content {
+        width: 90%;
+        margin: 0;
+    }
+
+    .dashboardHeader .imageContainer {
+        display: none;
+    }
+
+    .dashboardContent {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .classCardContainer .upperHalf {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
 }

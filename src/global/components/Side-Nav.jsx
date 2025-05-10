@@ -13,7 +13,7 @@ import { ListSubheader } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
-export default function SideNav({ courses }) {
+export default function SideNav({ courses, toggleSidebar }) {
   const [open, setOpen] = useState(true);
 
   const handleClick = () => {
@@ -77,6 +77,13 @@ export default function SideNav({ courses }) {
           width: "100%",
           pl: 5,
         }}
+        onClick={() => {
+          const contactSection = document.getElementById("contact-section");
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+            toggleSidebar(false);
+          }
+        }}
       >
         <ListItemIcon>
           <EmailIcon />
@@ -124,6 +131,7 @@ export default function SideNav({ courses }) {
                   color: "#1A1A80",
                   fontSize: "1.5rem",
                   fontWeight: "600",
+                  backgroundColor: "#FAFAFA",
                 }}
               >
                 {type}

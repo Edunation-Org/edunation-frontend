@@ -1,9 +1,12 @@
 import s from "../styles/Hero.module.css";
 import HeroImg from "../images/hero.svg";
-import Arrow from "../images/arrow.svg";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "../../../authentication/AuthContext";
 
 export default function Hero() {
+  const { user } = useContext(AuthContext);
+
   return (
     <>
       <div className={s.heroContainer}>
@@ -12,29 +15,26 @@ export default function Hero() {
         </div>
         <div className={s.heroContentContainer}>
           <h1 className="titleFont">
-            Empowering Every Learner,
+            Empowering Every
             <br />
-            Everywhere.
+            Learner, Everywhere.
           </h1>
-          <div className={s.subContentContainer}>
-            <div className={s.subContent}>
-              <div className={s.imgRow}>
-                <div className={s.imgFiller}></div>
-                <div className={s.imgFiller}></div>
-                <div className={s.imgFiller}></div>
-                <div className={s.imgFiller}></div>
-              </div>
-              <div className={s.subTextContainer}>
-                <h3 className="titleFont">Dedicated to helping students thrive — with special care for underrepresented and underserved communities.</h3>
-                <p>50+ Active Teachers</p>
-              </div>
-            </div>
-            <div className={s.contactContainer}>
-              <img src={Arrow} alt="" />
-              <Link to="/login">
-                <button className={s.loginButton}>Start Learning</button>
+          <div className={s.subContent}>
+            <h3 className="titleFont">
+              Dedicated to helping students thrive — with special care for
+              underrepresented and underserved communities.
+            </h3>
+            <p>50+ Active Teachers</p>
+
+            {user ? (
+              <Link to="/profile/dashboard">
+                <button className={s.heroBtn}>Start Learning</button>
               </Link>
-            </div>
+            ) : (
+              <Link to="/login">
+                <button className={s.heroBtn}>Start Learning</button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
