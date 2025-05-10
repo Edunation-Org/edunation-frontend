@@ -1,6 +1,7 @@
 .myProfileContainer {
     width: 100%;
     margin-top: 4rem;
+    margin-bottom: 4rem;
     margin-inline: 4rem 10rem;
 }
 
@@ -12,12 +13,11 @@
     padding: 0;
     margin-top: 3rem;
     width: max-content;
-    width: 100%;
 }
 
 .profileDetailsForm .inputsWrapper {
     display: flex;
-    gap: 15rem;
+    gap: 10rem;
 }
 
 .profileDetailsForm .leftInputs,
@@ -56,7 +56,7 @@
 
 .profileDetailsForm .inputContainer .inputLine {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background: var(--accent-color);
     border-radius: 0.5rem;
@@ -109,4 +109,33 @@
 
 .profileDetailsForm button:hover {
     background: var(--sec-color);
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .myProfileContainer {
+        width: 100%;
+        padding: 0 2rem;
+        margin-inline: 0;
+    }
+
+    .profileDetailsForm {
+        width: 100%;
+    }
+
+    .profileDetailsForm .inputsWrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .profileDetailsForm .inputContainer {
+        width: 100%;
+        padding-right: 2rem;
+    }
+
+    .profileDetailsForm .inputContainer .inputLine input,
+    .profileDetailsForm .inputContainer .inputLine select {
+        width: auto;
+    }
 }
