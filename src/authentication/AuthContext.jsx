@@ -91,7 +91,7 @@ export const AuthProvider = ({ children }) => {
       {
         email: email,
       },
-      { isPublic: true }
+      { meta: { isPublic: true } }
     );
     if (response.status === 201) {
       alert("Password reset link sent to your email");

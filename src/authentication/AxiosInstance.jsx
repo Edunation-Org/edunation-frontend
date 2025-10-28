@@ -19,6 +19,11 @@ axiosInstance.interceptors.request.use(async (request) => {
     ? JSON.parse(localStorage.getItem("authTokens"))
     : null;
 
+  // If no tokens exist, skip authentication for this request
+  if (!authTokens || !authTokens.accessToken) {
+    return request;
+  }
+
   const decodedToken = jwtDecode(authTokens.accessToken);
   const isTokenExpired = decodedToken.exp * 1000 < Date.now();
 
