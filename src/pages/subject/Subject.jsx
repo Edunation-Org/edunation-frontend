@@ -220,7 +220,7 @@ function Subject() {
                 <p>
                   {course
                     ? course.description
-                    : "Empowering Every Learner, Everywhere. Dedicated to helping students thrive — with special care for underrepresented and underserved communities."}
+                    : "Empowering every learner to reach their full potential through personalized, high-quality education."}
                 </p>
               </div>
               <div className={s.subjectPrice}>
