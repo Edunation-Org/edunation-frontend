@@ -168,6 +168,35 @@ export default function Wallet() {
                 <p>Loading...</p>
               )}
               <p>For any discrepancies, please contact support.</p>
+              
+              {/* Temporary debug - remove after fixing */}
+              {(process.env.NODE_ENV === 'development' || window.location.hostname.includes('edunationalacademy')) && (
+                <button 
+                  onClick={() => {
+                    const tokens = localStorage.getItem("authTokens");
+                    if (tokens) {
+                      const parsed = JSON.parse(tokens);
+                      console.log("🔍 Debug Info:");
+                      console.log("JWT Token (copy to jwt.io):", parsed.accessToken);
+                      console.log("Full auth data:", parsed);
+                      console.log("Go to jwt.io and paste the token above to decode it");
+                    } else {
+                      console.log("❌ No tokens found in localStorage");
+                    }
+                  }}
+                  style={{ 
+                    marginTop: '20px', 
+                    padding: '10px', 
+                    backgroundColor: '#007bff', 
+                    color: 'white', 
+                    border: 'none', 
+                    borderRadius: '5px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  🔍 Debug JWT Token (console)
+                </button>
+              )}
             </div>
           </div>
         </div>

@@ -6,6 +6,15 @@ const ProtectedRoute = ({ children }) => {
   const { user } = useContext(AuthContext);
   const location = useLocation();
 
+  // Temporary debug - remove after fixing
+  if (process.env.NODE_ENV === 'development' || window.location.hostname.includes('edunationalacademy')) {
+    console.log("🔍 ProtectedRoute Debug:", {
+      userEmail: user?.email,
+      isProfileComplete: user?.isProfileComplete,
+      currentPath: location.pathname
+    });
+  }
+
   if (!user) {
     return <Navigate to="/login" replace />;
   }
@@ -15,6 +24,7 @@ const ProtectedRoute = ({ children }) => {
     !user.isProfileComplete &&
     location.pathname !== "/complete-profile"
   ) {
+    console.log("❌ Redirecting to complete-profile because isProfileComplete:", user.isProfileComplete);
     return <Navigate to="/complete-profile" />;
   }
 
