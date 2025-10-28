@@ -21,8 +21,8 @@ export default function Hero() {
           </h1>
           <div className={s.subContent}>
             <h3 className="titleFont">
-              Dedicated to helping students thrive — with special care for
-              underrepresented and underserved communities.
+              Helping students thrive through engaging, high-quality 
+              education tailored to their needs
             </h3>
             <p>50+ Active Teachers</p>
 
