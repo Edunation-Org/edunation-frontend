@@ -427,9 +427,14 @@
   }
 }
 
+
+
+
+
 @media (max-width: 570px) {
-  form {
-    padding: 0 1.5rem;
+  .sign-in-form,
+  .sign-up-form {
+    padding: 0 1rem;
   }
 
   .image {
@@ -437,23 +442,46 @@
   }
 
   .panel .content {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
   }
 
   .container {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .container:before {
+    width: 800px;
+    height: 800px;
     bottom: 72%;
     left: 50%;
   }
 
   .container.sign-up-mode:before {
-    bottom: 28%;
+    bottom: auto;
+    top: -15%;
     left: 50%;
   }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .input-field {
+    height: 50px;
+    margin: 6px 0;
+  }
+  
+  .form-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
 }
+
+
+
+
+
 
 @media (max-width: 768px) {
   .container {
@@ -504,61 +532,111 @@
 
 
 
-
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
+    min-height: 100vh;
+  }
+  
+  /* Reduce the circular background size */
+  .container:before {
+    width: 1000px;
+    height: 1000px;
+    bottom: 70%;
+    left: 50%;
+  }
+  
+  /* When in sign-up mode, move circle to top */
+  .container.sign-up-mode:before {
+    bottom: auto;
+    top: -10%;
+    left: 50%;
   }
   
   .signin-signup {
     width: 100%;
-    top: 90%;
+    top: 85%;
     transform: translate(-50%, -100%);
+  }
+  
+  /* When in sign-up mode, move form to center */
+  .container.sign-up-mode .signin-signup {
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   
   .panel {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
   }
   
-  /* FIX: Ensure left panel content and button are visible */
+  /* Left panel (Login view) */
   .panel.left-panel {
-    padding: 1.5rem 1rem;
-    min-height: 200px;
-    display: flex;
+    min-height: 180px;
     justify-content: center;
   }
   
   .panel.left-panel .content {
     padding: 1rem;
-    transform: translateY(0) !important;
+    max-width: 100%;
   }
 
   .panel.left-panel .content h3 {
-    font-size: clamp(1.2rem, 5vw, 1.5rem);
-    word-break: break-word;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .panel.left-panel .content p {
+    font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+    text-align: center;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+  }
+  
+  /* Right panel (Sign-up view) */
+  .panel.right-panel {
+    min-height: 180px;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+  }
+  
+  .panel.right-panel .content {
+    padding: 1rem;
+  }
+  
+  .panel.right-panel .content h3 {
+    font-size: clamp(1rem, 4vw, 1.3rem);
     text-align: center;
     margin-bottom: 0.5rem;
   }
 
-  .panel.left-panel .content p {
-    font-size: clamp(0.9rem, 4vw, 1rem);
+  .panel.right-panel .content p {
+    font-size: clamp(0.85rem, 3.5vw, 0.95rem);
     text-align: center;
     margin: 0.5rem 0;
-    line-height: 1.5;
   }
   
-  /* FIX: Make sure the signup button is visible */
   .panel-btn {
     margin-top: 0.5rem;
-    position: relative;
     z-index: 10;
   }
   
-  /* FIX: Adjust the background circle to not cover the button */
-  .container:before {
-    bottom: 75% !important;
+  /* Form styling for mobile */
+  .sign-in-form,
+  .sign-up-form {
+    padding: 0 1.5rem;
+  }
+  
+  .input-field {
+    margin: 8px 0;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
 }
 
