@@ -420,12 +420,6 @@
   .right-panel .content {
     transform: translateY(300px);
   }
-  
-  /* Ensure content remains visible */
-  .panel .content {
-    opacity: 1;
-    visibility: visible;
-  }
 
   .container.sign-up-mode .signin-signup {
     top: 5%;
@@ -464,7 +458,6 @@
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
-    overflow-y: auto;
   }
   .signin-signup {
     width: 100%;
@@ -475,19 +468,23 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    min-height: auto;
   }
-  
-  .left-panel,
-  .right-panel {
+  .panel.left-panel .content h3 {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+  .panel.left-panel .content p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .panel.left-panel .content {
     padding: 2rem 1rem;
   }
-  
-  .panel .content {
-    padding: 1rem;
-    transform: translateY(0) !important;
-  }
-  
+
   .panel.left-panel .content h3 {
     font-size: clamp(1.2rem, 5vw, 1.5rem);
     word-break: break-word;
@@ -501,20 +498,8 @@
     margin: 1rem 0;
     line-height: 1.5;
   }
-  
-  .panel-btn {
-    margin-top: 1rem;
-  }
-  
-  /* Ensure right panel (signup button) is visible */
-  .right-panel .content {
-    transform: translateY(0) !important;
-    opacity: 1;
-  }
-  
-  .container:before {
-    height: 1200px;
-    width: 1200px;
-  }
 }
+
+
+
 
