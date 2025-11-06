@@ -503,20 +503,25 @@
 
 
 
-
 @media (max-width: 870px) {
-  .container.sign-up-mode .left-panel .image,
-  .container.sign-up-mode .left-panel .content {
-    transform: translateY(0) !important;
+  .signin-signup {
+    z-index: 20 !important;
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    left: 0 !important;
+    margin-top: 2rem;
   }
-}
 
+  .container.sign-up-mode .left-panel .content,
+  .container.sign-up-mode .left-panel .image {
+    transform: none !important;
+    opacity: 1 !important;
+  }
 
-@media (max-width: 570px) {
-  .left-panel .content {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
+  .container.sign-up-mode .right-panel {
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 }
 
