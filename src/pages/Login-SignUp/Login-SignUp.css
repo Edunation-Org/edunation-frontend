@@ -499,3 +499,24 @@
     line-height: 1.5;
   }
 }
+
+
+
+
+
+@media (max-width: 870px) {
+  .container.sign-up-mode .left-panel .image,
+  .container.sign-up-mode .left-panel .content {
+    transform: translateY(0) !important;
+  }
+}
+
+
+@media (max-width: 570px) {
+  .left-panel .content {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
